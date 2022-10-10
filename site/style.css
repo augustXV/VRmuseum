@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url("/pictures/background.jpg");
+    background: url("/site/pictures/background.jpg");
 }
 
 header{
@@ -18,15 +18,20 @@ header>h1{
 }
 
 figure{
+    width: 50%;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 2%;
 }
 
 .mainPic{
     display: block;
     max-width:100%;
+    min-width: 80%;
+    min-height: 80%;
     border: 0.1px solid;
-    margin: 0 auto;
+    margin: 5% auto;
 }
 
 .pictures{
