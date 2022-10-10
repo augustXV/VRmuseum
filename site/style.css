@@ -26,6 +26,7 @@ figure{
     display: block;
     max-width:100%;
     border: 0.1px solid;
+    margin: 0 auto;
 }
 
 .pictures{
