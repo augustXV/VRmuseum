@@ -5,22 +5,52 @@ body{
 }
 
 header{
-    background-color: goldenrod;
-    width: 100%;
     margin: 0;
+    width: 100%;
+    background-color: goldenrod;
+    min-height: 4vh;
 }
 
-header>h1{
+h1{
+    margin: 0;
     padding: 5px;
-    font-size: 200%;
+    font-size: 100%;
     text-align: center;
 }
 
+.header_pop_up{
+    overflow: auto;
+    width: 100%;
+    max-height: 60vh;
+    display: none;
+    border-radius: 2%;
+}
+
+.header_pop_up>p{  
+    padding: 0.5%;
+    font-size: 100%;
+}
+
+header:hover .header_pop_up{
+    transition: all 0.8s ease 0s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: goldenrod;
+    z-index: 1;
+}
+
+header:hover h1{
+    display: none;
+}
+
 figure{
-    width: 50%;
-    height: 80%;
     position: relative;
     overflow: hidden;
+    width: 50%;
+    height: 80%;
     border-radius: 2%;
 }
 
@@ -37,31 +67,40 @@ figure{
     text-align: center;
 }
 
+@media screen and (min-width: 2030px) {
+    .header_pop_up>p{
+        font-size: 300%;
+    }
+}
+
 @media screen and (min-width: 1630px) {
+    h1{
+        font-size: 40px;
+    }
     .pictures p{
         font-size: 50px;
     }
 }
 
 @media screen and (max-width: 544px) {
-    .pictures p{
+    h1, .pictures p, .header_pop_up>p{
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 300px) {
-    .pictures p{
+    h1,.pictures p, .header_pop_up>p{
         font-size: 6px;
     }
 }
 
 .mainPic{
     display: block;
+    margin: 5% auto;
     max-width:90%;
     max-height: 90%;
     min-width: 80%;
     min-height: 80%;
-    margin: 5% auto;
 }
 
 .backgroundPic{
@@ -71,6 +110,6 @@ figure{
     height: 110%;
     left: -5%;
     top: -5%;
-    filter: blur(10px);
     z-index: -1;
+    filter: blur(10px);
 }
