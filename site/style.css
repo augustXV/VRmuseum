@@ -21,22 +21,16 @@ body{
     /* transition: all 1s ease-in-out 1s; */
 }
 
-.header_background{
-    position: fixed;
-    width: 100%;
-    max-height: 57%;
-    z-index: -2;
-}
 
-.header_pop_up>p{  
+.nav_p{  
     padding: 0.5%;
     margin: 1% 0 1% 4%;
     font-size: 100%;
+    font-weight: bold;
     color: rgb(212, 179, 28);
 }
 
 .header_pop_up{
-    /* transition: all 1s ease-in-out 1s; */
     position: fixed;
     overflow: auto;
     width: 100%;
@@ -47,6 +41,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     z-index: 1;
+    background: linear-gradient(135deg, rgb(17, 19, 18), rgb(45, 45, 44) 62%);  
 }
 
 figure{
@@ -65,33 +60,39 @@ figure{
     align-items: center;
 }
 
-.pictures p{
+.nav_target{
     margin: 0 0 4% 0;
     font-size: 25px;
     text-align: center;
     color: rgb(212, 179, 28);
 }
 
+@media screen and (max-width: 1000px) {
+    .header_pop_up{
+        max-height: 100%;
+    }
+}
+
 @media screen and (min-width: 2030px) {
-    .header_pop_up>p{
+    .nav_p{
         font-size: 300%;
     }
 }
 
 @media screen and (min-width: 1630px) {
-    .pictures p{
+    .nav_target{
         font-size: 50px;
     }
 }
 
 @media screen and (max-width: 544px) {
-    .pictures p, .header_pop_up>p{
+    .nav_target, .nav_p{
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 300px) {
-    .pictures p, .header_pop_up>p{
+    .nav_target, .nav_p{
         font-size: 6px;
     }
 }
@@ -99,10 +100,10 @@ figure{
 .mainPic{
     display: block;
     margin: 5% auto;
-    max-width:90%;
-    max-height: 90%;
-    min-width: 80%;
-    min-height: 80%;
+    max-width:95%;
+    max-height: 95%;
+    min-width: 85%;
+    min-height: 85%;
 }
 
 .backgroundPic{
@@ -116,3 +117,20 @@ figure{
     -webkit-filter: blur(10px);
             filter: blur(10px);
 }
+
+*::-webkit-scrollbar {
+    width: 1vw;
+    background-color:#282829;
+  }
+  
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #282829;
+  }
+  
+*::-webkit-scrollbar-thumb {
+
+    height: 20%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgb(17, 19, 18), rgb(212, 179, 28));
+  }

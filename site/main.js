@@ -19,6 +19,8 @@ for(let item of navP) {
         for(let targetItem of navTarget){
             if (item.textContent == targetItem.textContent){
                 targetItem.scrollIntoView({block: "center", behavior: "smooth"});
+                headerPicList.classList.remove("header_pop_up");
+                headerPicList.classList.add("header_pic_list");
             }
         }
     })
