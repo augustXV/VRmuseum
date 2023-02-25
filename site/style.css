@@ -44,20 +44,20 @@ body{
     background: linear-gradient(135deg, rgb(17, 19, 18), rgb(45, 45, 44) 62%);  
 }
 
-figure{
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    height: 80%;
-    border-radius: 2%;
-}
-
 .pictures{
     padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+figure{
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 80%;
+    border-radius: 2%;
 }
 
 .nav_target{
@@ -100,10 +100,10 @@ figure{
 .mainPic{
     display: block;
     margin: 5% auto;
-    max-width:95%;
-    max-height: 95%;
-    min-width: 85%;
-    min-height: 85%;
+    max-width: 85%;
+    /* max-height: 95%; */
+    min-width: 71%;
+    /* min-height: 85%; */
 }
 
 .backgroundPic{
@@ -121,16 +121,16 @@ figure{
 *::-webkit-scrollbar {
     width: 1vw;
     background-color:#282829;
-  }
+}
   
 *::-webkit-scrollbar-track {
     -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
     background-color: #282829;
-  }
+}
   
 *::-webkit-scrollbar-thumb {
 
     height: 20%;
     border-radius: 10px;
     background: linear-gradient(180deg, rgb(17, 19, 18), rgb(212, 179, 28));
-  }
+}
